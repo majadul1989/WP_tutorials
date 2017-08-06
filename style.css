@@ -43,10 +43,13 @@ Author URI: https://profiles.wordpress.org/majadul
 	font-weight:bold;
 }
 
-.nav-menu ul  .current-menu-item a:link,
-.nav-menu ul  .current-menu-item a:visited,
-.nav-menu ul .current_page_item a:link,
-.nav-menu ul .current_page_item a:visited
+.nav-menu ul  li.current-menu-item a:link,
+.nav-menu ul  li.current-menu-item a:visited,
+.nav-menu ul  li.current_page_item a:link,
+.nav-menu ul  li.current_page_item a:visited,
+.nav-menu ul  li.current-page-ancestor a:link,
+.nav-menu ul  li.current-page-ancestor a:visited
+
 {
 	background-color: #fff;
 	display: block;
@@ -55,6 +58,50 @@ Author URI: https://profiles.wordpress.org/majadul
 	font-weight:bold;
 }
 
-.nav-menu ul li:last-child{
+.nav-menu ul li:first-child{
+	border-left: 1px solid #fff;
+}
+
+/*--------------------
+child menu style
+---------------------*/
+.parent_title {
+	margin-top: 6px;
+	background-color: #ddd;
+}
+.parent_title ul {
+    margin: 0;
+    padding: 0;
+}
+
+.parent_title ul li {
+	border-right: 1px solid #3399FF;
+	list-style: none;
+	float: left;
+}
+
+.parent_title ul li a:visited,
+.parent_title ul li a:link{
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+	color: #000;
+}
+
+.parent_title .parent {
+	position: relative;
+	padding-right: 20px;
+}
+
+.parent_title ul li:first-child{
 	border: none;
+}
+
+.parent_title .parent a::after {
+    content: "≻";
+    font-family: FontAwesome;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 2px;
 }
