@@ -2,6 +2,7 @@
 	<h2 class="blog-post-title">
 	<a href="<?php echo  the_permalink();?>"><?php the_title(); ?></a></h2>
 	<p class="blog-post-meta">
+<<<<<<< HEAD
 		<?php the_date(); ?> by
 		<a href="#">
 			<?php the_author(); ?> 
@@ -19,6 +20,12 @@
 		    echo trim( $output, $separator );
 		}
 		 ?>
+=======
+<small><?php the_time( 'F jS, Y' ); ?> by <?php the_author_posts_link(); ?></small>
+<small> <?php edit_post_link('Edit this entry.','',''); ?>
+</small>
+		
+>>>>>>> f86d3260a56cd5b76d88d75e11f74058d2cbf593
 	</p>
 
  <?php the_content(); ?>
