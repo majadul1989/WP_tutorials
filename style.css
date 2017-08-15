@@ -8,6 +8,10 @@ Author URI: https://profiles.wordpress.org/majadul
 
 */
 
+/*Warpper style*/
+
+
+
 /*Header Menu Style */
 .nav-menu{
 	background-color: #3399FF;
@@ -105,3 +109,20 @@ child menu style
     right: 0;
     top: 2px;
 }
+
+
+/*Slide style*/
+.home-slide {
+    margin-top: 10px;
+    box-shadow: 0 0 5px #000;
+}
+
+.home-slide li {
+    list-style: outside none none;
+}
+
+.home-slide .widgettitle {
+    margin: 0;
+    padding: 0;
+}
+

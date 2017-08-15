@@ -23,5 +23,9 @@
  <small><?php _e(esc_html('Posted in') ); ?> <?php the_category( ', ' ); ?> |</small>
  <small><?php the_time( 'F jS, Y' ); ?> | <?php _e(esc_html('Posted by -') ); ?> <?php the_author_posts_link(); ?> |</small>
  <small> <?php edit_post_link('Edit this entry.','',''); ?> </small>
+ <small> <?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?> 
+
+
+</small>
 </p>
 </div><!-- /.blog-post -->

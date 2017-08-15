@@ -26,5 +26,37 @@ add_image_size( 'single-post-banner', 700, 180 );
 // Post formate 
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video' ) );
 
+// Widget registrations
+   /**
+	* Creates a sidebar
+	* @param string|array  Builds Sidebar based off of 'name' and 'id' values.
+	*/
+function widget_registration_for_custom_theme() {
+register_sidebar( $args = array(
+		'name'          => __( 'Slide', 'theme_text_domain' ),
+		'id'            => 'home-slide',
+		'description'   => '',
+		'class'         => 'custom_widget',
+		'before_widget' => '<li id="%1" class="widget %2">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>'
+	)
+);
+
+register_sidebar( $args = array(
+		'name'          => __( 'Sidebar', 'theme_text_domain' ),
+		'id'            => 'sidebar',
+		'description'   => '',
+		'class'         => 'custom_widget',
+		'before_widget' => '<li id="%1" class=" widget %2">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h2 class="widgettitle">',
+		'after_title'   => '</h2>'
+	)
+);
+
+}
+add_action( 'widgets_init', 'widget_registration_for_custom_theme' );
 
  ?>

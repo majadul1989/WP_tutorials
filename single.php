@@ -8,7 +8,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
 
 <article class="post page single">
 	<div class="post page title">
-		<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2> >>
+		<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2> >> <!-- its going to style >> -->
 		<?php 
 			$categories = get_the_category();
 			$separator = ', ';
