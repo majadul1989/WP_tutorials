@@ -2,7 +2,9 @@
 <div class="container warpper">
 <div class="row">
 <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12 main-index">
-<?php if(is_home()): ?>
+
+<?php if(is_home() || !empty(is_home())): // Is check home page or not ?>
+	<?php if (wp_get_sidebars_widgets() ): ?>
 	<div class="row">
 	<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 home-slide">
 		<div class="row">
@@ -15,6 +17,7 @@
 		</div>
 	</div> <!-- home-slide -->
 	</div>
+	<?php endif; ?>
 	<?php endif; ?>
 <?php if (have_posts()): while (have_posts()): the_post();
 	get_template_part( 'content', get_post_format() ); ?>
