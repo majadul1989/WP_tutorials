@@ -23,8 +23,28 @@ add_theme_support( 'post-thumbnails' );
  the_post_thumbnail( 'single-post-nanner' ); */
 add_image_size( 'single-post-banner', 700, 180 );
 
+// // default Post Thumbnail dimensions (cropped)
+if ( function_exists( 'add_theme_support' ) ) { 
+    set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
+    // additional image sizes
+    // delete the next line if you do not need additional image sizes
+    add_image_size( 'category-thumb', 290, 300, true ); //300 pixels wide (and unlimited height)
+}
+
 // Post formate 
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'video' ) );
+
+// custom background
+add_theme_support( 'custom-background' );
+
+/*********** short the skript******/
+function excerpt($num) {
+$limit = $num+1;
+$excerpt = explode(' ', get_the_excerpt(), $limit);
+array_pop($excerpt);
+$excerpt = implode(" ",$excerpt).'....';
+echo $excerpt;
+}
 
 // Widget registrations
    /**

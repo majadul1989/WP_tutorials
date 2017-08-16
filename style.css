@@ -112,7 +112,6 @@ child menu style
 
 
 /*Slide style*/
-
 .home-slide li {
     list-style: outside none none;
 }
@@ -122,3 +121,12 @@ child menu style
     padding: 0;
 }
 
+
+/*Post containt style*/
+
+.post_contain_box {
+    box-shadow: 0 0 3px #000;
+}
+
+.post-image img {
+}
